@@ -1,0 +1,86 @@
+---------------------------------
+Work Flow of GIT Commands
+---------------------------------
+
+git --version   : to check the git version
+
+git init : for initialize Empty folder (to track files )
+
+git config user.name "Your UserName" : to configure the user name 
+git config user.email "Your Email"   : to configure the user's email
+
+git config --global user.name "Your UserName"  : to configure the user name globally 
+git config --global user.name "Your UserName"  : to configure the user email globally
+
+git add filename    : to add a particular file to staging area
+git add --all       : to add all files to staging area
+git add .           : to add all files to staging area
+git add *.extension : to add only the extension files (eg: .java, .py)
+
+git commit -m  "Commit Message" : to make a commit (Moving file from staging to Local repository/ Committed Area)
+
+git remote add origin GithubURL : to establish the connection between Local to remote repository
+git remote -v                   : to check connection established between local and remote
+
+git push origin branch_name     : to upload changes from local to rmeote repository (default branch name is  master)
+
+git status                      : shows the current status of your working directory and staging area
+
+git log                         : to get the history of commits
+git log --online                : to get the history of commits
+
+---------------------------------------------------------------------------------------------------------------------------------
+
+-------------------
+Branching Commands
+-------------------
+
+git branch branch_name  : to create a branch in local (write your selected name in the place of branch_name)
+
+git checkout branch_name : to switch to the created branch 
+git switch branch_name   : to switch to the created branch
+
+git checkout -b branch_name : to create and switch branch at a time
+
+git branch                  : to list all the branches
+git branch --list           : to list all the branches
+
+git push origin branch_name  : to upload changes to the created branch in remote repository
+
+git branch -d branch_name    : to delete the branch locally 
+git branch -D branch_name    : to delete the branch locally
+
+git push origin -d branch_name : to delete the branch remotely
+
+git branch -r                  : to list remote branches
+git branch -a                  : to list local and remote branches
+
+git branch -m oldbranchname newbranchname  :  to rename a branch
+
+git merge branch_name          : to merge branch
+
+
+--------------------------------------------------------------------------------------------------------------------------------
+
+---------------
+Undoing Changes
+---------------
+
+git checkout filename    : to undo the changes made in working Direcrory (for particular file)
+git checkout .           : to undo the changes made in working Directory (for all the files)
+
+git rm filename          : to remote a file from the local repository
+git rm --cached filename : to remote file from the remote repositroy(Eg: Github)
+
+git config --edit        : to edit the configuration details like email and UserName
+
+--------------------------------------------------------------------------------------------------------------------------------
+
+
+git clone GithubURL     : to get all files from remote repository to local repository
+
+git reflog              : to list existing and deleted commit history (reference logs)
+
+git cherry-pick commit_id  : to apply particular changes from one branche to another branch  by picking specific commit id
+
+git pull origin master     : to pull the files from remote repository to the local repository

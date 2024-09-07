@@ -1,0 +1,70 @@
+------------------------------------------------
+Volume Commands
+------------------------------------------------
+
+1. Create a named Volume
+------------------------------------------------
+docker volume create volume_name
+------------------------------------------------
+
+2. List all volumes
+------------------------------------------------
+docker volume ls 
+------------------------------------------------
+
+3. Inspect details of a volume
+------------------------------------------------
+docker volume inspect volume_name
+------------------------------------------------
+
+4. Remove a Volume
+------------------------------------------------
+docker volume rm volume_name
+------------------------------------------------
+
+5. Run a container with a volume(mount)
+------------------------------------------------
+docker run --name container_name -v volume_name:path/in/container image_name:tag
+------------------------------------------------
+
+6. Copy files between a container and a  volume
+------------------------------------------------
+docker cp local_file_or_directory container_name: /path/in/container
+------------------------------------------------
+
+
+------------------------------------------------
+Network Commands
+------------------------------------------------
+
+1. Run a container with port mapping
+------------------------------------------------
+docker run --name container_name -p host_port:container_port image_name
+docker run --nmae my_container -p 8080:80 myapp
+------------------------------------------------
+
+2. List all networks
+------------------------------------------------
+docker network ls
+------------------------------------------------
+
+3. Inspect details of a network
+------------------------------------------------
+docker network inspect network_name
+------------------------------------------------
+
+4. Create a user-defined bridge network
+------------------------------------------------
+docker network create network_name
+------------------------------------------------
+
+5. Connect a container to a network
+------------------------------------------------
+docker network connect network_name container_name 
+------------------------------------------------
+
+6. Disconnect a container from a network
+------------------------------------------------
+docker network disconnect network_name container_name
+------------------------------------------------
+

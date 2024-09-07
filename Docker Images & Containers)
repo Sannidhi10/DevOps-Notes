@@ -1,0 +1,132 @@
+                                                            DOCKER IMAGES & CONTAINER COMMNADS
+
+
+----------------------------------------------------------
+DOCKER IMAGE COMMANDS
+----------------------------------------------------------
+
+1. Build an image from a Dockerfile
+ -----------------------------------------------
+ docker build -t image_name path_to_dockerfile
+ -----------------------------------------------
+
+2. List all Local images
+ -----------------------------------------------
+ docker images
+ -----------------------------------------------
+
+3. Pull an image from Docker Hub
+ -----------------------------------------------
+  docker pull image_name:tag
+ -----------------------------------------------
+
+4. Remove a Local image
+ -----------------------------------------------
+ docker image_name:tag
+ docker rm [image_name/image_id]
+ -----------------------------------------------
+
+5. Tag an image
+ -----------------------------------------------
+ docker tag source_image:tag new_image:tag
+ eg: docker tag myapp:latest myapp:v1
+ -----------------------------------------------
+
+6. Push an image to Docker Hub
+ -----------------------------------------------
+ docker push image_name:tag
+ -----------------------------------------------
+
+7. Inspect details of an image
+ -----------------------------------------------
+ docker image inspect image_name:tag
+ -----------------------------------------------
+
+8. Save an image to a tar archive
+ -----------------------------------------------
+ docker save -o image_name.tar image_name:tag
+ ----------------------------------------------- 
+
+9. Load an image from a tar archive
+ -----------------------------------------------
+ docker load -i image_name.tar
+ -----------------------------------------------
+
+10. Prune unused images
+ -----------------------------------------------
+ docker image prune
+ -----------------------------------------------
+
+----------------------------------------------------------
+DOCKER CONTAINER COMMANDS
+----------------------------------------------------------
+
+1. Run a container from an image
+------------------------------------------------
+docker run container_name image_name
+------------------------------------------------
+
+2. Run a named container from an image
+------------------------------------------------
+docker run --name container_name image_name:tag
+------------------------------------------------
+
+3. List all running containers
+------------------------------------------------
+docker ps
+------------------------------------------------
+
+4. List all containers (including stopped ones)
+------------------------------------------------
+docker ps -a
+------------------------------------------------
+
+5. Stop a running container
+------------------------------------------------
+docker stop container_name_or_id
+------------------------------------------------
+
+6. Start a Stopped container
+------------------------------------------------
+docker start container_name_or_id
+------------------------------------------------
+
+7. Run container in interactive mode
+------------------------------------------------
+docker run -it container_name_or_id
+------------------------------------------------
+
+8. Run container in interactive shell
+------------------------------------------------
+docker run -it container_name_or_id sh
+------------------------------------------------
+
+9. Remove a stopped container
+------------------------------------------------
+docker rm container_name_or_id
+------------------------------------------------
+
+10. Remove a running container (Forcefully)
+------------------------------------------------
+docker rm -f container_name_or_id
+------------------------------------------------
+
+11. Inspect details of a container
+------------------------------------------------
+docker inspect container_name_or_id
+------------------------------------------------
+
+12. View container logs
+------------------------------------------------
+docker logs container_name_or_id
+------------------------------------------------
+
+13. Pause a running container
+------------------------------------------------
+docker pause container_name_or_id
+------------------------------------------------
+
+14. Unpause a pause container
+------------------------------------------------
+docker unpause container_name_or_id
+------------------------------------------------

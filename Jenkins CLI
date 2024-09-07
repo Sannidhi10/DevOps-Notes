@@ -1,0 +1,85 @@
+1. Download Jenkins CLI JAR:
+
+wget http://your-jenkins-server:8080/jnlpJars/jenkins-cli.jar
+
+2. Running a Command:
+
+java -jar jenkins-cli.jar -s http://your-jenkins-server:8080 command [options] [arguments]
+
+3. Help:
+
+java -jar jenkins-cli.jar -s http://your-jenkins-server:8080 help
+
+4. List Jobs:
+
+java -jar jenkins-cli.jar -s http://your-jenkins-server:8080 list-jobs
+
+5. Build a Job:
+
+java -jar jenkins-cli.jar -s http://your-jenkins-server:8080 build job_name
+
+6. To pass parameters to a job:
+
+java -jar jenkins-cli.jar -s http://your-jenkins-server:8080 build job_name -p param1=value1 -p param2=value2
+
+7. Get Job Output:
+
+java -jar jenkins-cli.jar -s http://your-jenkins-server:8080 console job_name build_number
+
+8. Get Job Config:
+
+java -jar jenkins-cli.jar -s http://your-jenkins-server:8080 get-job job_name
+
+9. Update Job Config:
+
+java -jar jenkins-cli.jar -s http://your-jenkins-server:8080 update-job job_name < config.xml
+
+10. Create a New Job:
+
+java -jar jenkins-cli.jar -s http://your-jenkins-server:8080 create-job new_job_name < config.xml
+
+11. Delete a Job:
+
+java -jar jenkins-cli.jar -s http://your-jenkins-server:8080 delete-job job_name
+
+12. Disable a Job:
+
+java -jar jenkins-cli.jar -s http://your-jenkins-server:8080 disable-job job_name
+
+13. Enable a Job:
+
+java -jar jenkins-cli.jar -s http://your-jenkins-server:8080 enable-job job_name
+
+14. List Plugins:
+
+java -jar jenkins-cli.jar -s http://your-jenkins-server:8080 list-plugins
+
+15. Install Plugin:
+
+java -jar jenkins-cli.jar -s http://your-jenkins-server:8080 install-plugin plugin_name
+
+16. Safe Restart:
+
+java -jar jenkins-cli.jar -s http://your-jenkins-server:8080 safe-restart
+
+17. Shutdown:
+
+java -jar jenkins-cli.jar -s http://your-jenkins-server:8080 safe-shutdown
+
+18. Reload Configuration from Disk:
+
+java -jar jenkins-cli.jar -s http://your-jenkins-server:8080 reload-configuration
+
+---------------------------------------------------------------------------------------------------------
+
+Authentication
+
+Many Jenkins installations require authentication. You can pass your credentials using the -auth option:
+
+java -jar jenkins-cli.jar -s http://your-jenkins-server:8080 -auth username:token command
+
+Alternatively, you can use an API token instead of your password:
+
+java -jar jenkins-cli.jar -s http://your-jenkins-server:8080 -auth username:apiToken command
+
+

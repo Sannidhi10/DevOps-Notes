@@ -1,0 +1,58 @@
+------------------------------------------------------------------------------------------------
+Docker Compose Commands
+
+
+1. Create and start containers defined in a docker-compose.yml file
+------------------------------------------------
+docker compose up
+------------------------------------------------
+
+2. Stop and remove containers defined in a docker-compose.yml file 
+------------------------------------------------
+docker compose down
+------------------------------------------------
+
+3. Build or rebuild services
+------------------------------------------------
+docker compose Build
+------------------------------------------------
+
+4. List containers for a specific Docker Compose project
+------------------------------------------------
+docker compose ps
+------------------------------------------------
+
+5. View logs for services
+------------------------------------------------
+docker compose logs
+------------------------------------------------
+
+6. Scale services tpo a specific number of containers
+------------------------------------------------
+docker compose up -d --scale service_name=number
+------------------------------------------------
+
+7. Run a one-time command in a service
+------------------------------------------------
+docker compose run service_name command
+------------------------------------------------
+
+8. List all volumes
+------------------------------------------------
+docker volume ls 
+------------------------------------------------
+
+9. Pause a service
+------------------------------------------------
+docker volume pause service_name
+------------------------------------------------
+
+10. Unpause a service
+------------------------------------------------
+docker volume unpause service_name
+------------------------------------------------
+
+11. View details of a service
+------------------------------------------------
+docker compose ps service_name
+------------------------------------------------

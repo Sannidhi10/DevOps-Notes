@@ -1,0 +1,130 @@
+=========================================================================
+
+--------------
+Basic Commands
+--------------
+
+mkdir dir_name           : Make Directory ( to create a directory)
+mkdir dir1 dir2 dir3     : to create multiple directories at a time
+mkdir -p dir/subdir      : to create a directory and subdirectory at a time
+
+cd dir_name     : Change Directory (to switch to the created directory)
+
+cd ..           : to switch back to the previous directory
+
+cd              : to switch back to the users home directory
+
+ls              : to list the files & directories
+ls -a           : to display the hidden files
+
+pwd             : to print the path of the present working directory
+
+rmdir dir_name  : to remove or delete an empty directory
+
+rm -r dir_name  : to remove a directory which contains files & subdirectory
+
+clear           : to clear the screen
+
+echo            : to print the text
+
+history         : to get the history of commands
+
+touch filename  : to create a file
+
+touch file1 file2 file3   : to create multiple files at a time
+
+rm filename     : to remove a file
+
+cat filename    : to display the contents of a file
+
+
+
+-----------------------------
+File Management Commands
+-----------------------------
+
+cp source_file_path Destination_file_path    : to copy the files from one place to another place
+
+mv source_file_path Destination_file_path    : to move the files from one place to another
+
+mv oldfilename newfilename                   : to renaming the file
+
+
+-----------------------------
+User Management Commands
+-----------------------------
+
+useradd username            : to create a user
+adduser username            : to create a user
+
+passwd username             : to set password for a created user
+
+su username                 : to switch created user
+
+exit                        : to exit from the user
+
+userdel username            : to delete created user
+
+cat /etc/passwd             : to display users list
+
+sudo su                     : to switch to root user
+
+getent passwd               : to display users list
+
+
+-----------------------------
+Group Management Commands
+-----------------------------
+
+groupadd groupname          : to create a group
+
+gpasswd groupname           : to set password for a group
+
+usermod -aG gname username  : to add users to the group
+
+gpasswd -a username gname   :  to add users to the group
+
+gpasswd -d username gname   : to remove users from the group
+
+cat /etc/group              : list of groups and users
+
+getent group                : list of groups and users
+
+-----------------------------
+File Permissions Commands
+-----------------------------
+
+read(r)    - to see the content in a file
+write(w)   - to add conetnt
+execute(x) - to execute file
+
+ls -l           : to check the permissions of a file
+
+chmod 777 filename  : all permissions for a file
+
+chmod u+x filename :  giving Execute permission to user
+chmod g+r filename :  giving Read permission to group
+
+-----------------------------
+File Compression Commands
+-----------------------------
+
+tar -cvf archive.tar files      : to create a tar file
+tar -xvf archive.tar            : to extract tar file
+zip name.zip files              : to create a zip file
+unzip name.zip                  : to extract the files
+
+
+
+
+-----------------------------
+Networking  Commands
+-----------------------------
+
+ifconfig                    : displays the information regarding the network
+ip address                  : displays the IP address
+ping domain_name            : tests the network connectivity
+dig domain_name             : shows IP related information
+nslookup domain_name        : to look up the ip address related to domain name 
+ 
+
